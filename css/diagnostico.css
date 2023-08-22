@@ -1,0 +1,469 @@
+/* Estilos globales para todos los elementos */
+*{
+  padding: 0; /* Eliminar el espacio interior */
+  margin: 0; /* Eliminar los márgenes */
+  font-family: 'Montserrat', sans-serif; /* Establecer la fuente predeterminada */
+  box-sizing: border-box; /* Establecer el box model */
+}
+
+/* Establecer el comportamiento de desplazamiento suave para el documento */
+html{
+  scroll-behavior: smooth;
+}
+
+/* Establecer el fondo para el menú */
+.menu_fondo{
+  height: auto; /* Altura automática */
+  width: 100%; /* Ancho del 100% */
+  background-image: url(../assets/images/cei_sb.webp); /* Imagen de fondo */
+  background-size: cover; /* Hacer que la imagen de fondo cubra todo el espacio disponible */
+  background-position: center; /* Centrar la imagen de fondo */
+  padding-bottom: 33.5vh;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Estilizar la barra de navegación */
+nav{
+display: flex; /* Usar Flexbox */
+align-items: center; /* Alinear elementos verticalmente en el centro */
+justify-content: space-between; /* Espacio uniforme entre elementos */
+padding-top: 45px; /* Agregar espacio superior */
+padding-left: 5%; /* Agregar espacio izquierdo */
+padding-right: 5%; /* Agregar espacio derecho */
+}
+
+/* Estilizar el logotipo */
+.logo{
+color: white; /* Color de texto blanco */
+font-size: 30px; /* Tamaño de fuente 30px */
+font-weight: 500px; /* Grosor de fuente 500px */
+letter-spacing: 1px; /* Espaciado entre letras */
+cursor: pointer; /* Cambiar el cursor a puntero */
+}
+
+/* Estilizar el texto de la clase letra1 */
+.letra1{
+color:#87ea29; /* Color verde */
+font-weight: 600; /* Grosor de fuente 600 */
+}
+/* Estilizar el texto de la clase letra2 */
+.letra2{
+color: #0aae82; /* Color verde azulado */
+}
+/* Estilizar el texto de la clase letra3 */
+.letra3{
+color: #e8741c; /* Color naranja */
+font-weight: 600; /* Grosor de fuente 600 */
+}
+/* Estilizar el texto de la clase letra4 */
+.letra4{
+color: #ed1851; /* Color rojo rosado */
+}
+
+/* Estilizar elementos de lista en la barra de navegación */
+nav ul li{
+list-style-type: none; /* Eliminar marcadores de lista */
+display: inline-block; /* Colocar elementos de lista en línea */
+padding: 10px 25px; /* Espacio interior */
+}
+
+/* Estilizar enlaces en elementos de lista */
+nav ul li a{
+color: white; /* Color de texto blanco */
+text-decoration: none; /* Eliminar subrayado */
+font-weight: bold; /* Fuente en negrita */
+text-transform: capitalize; /* Transformar el texto a mayúsculas */
+}
+
+/* Estilizar enlaces en elementos de lista al pasar el cursor */
+nav ul li a:hover{
+background-color: transparent; /* Fondo transparente */
+color: #e8741c; /* Cambiar el color del texto al naranja */
+border: 4px solid #e8741c; /* Agregar borde naranja */
+padding: 9px 24px; /* Espacio interior */
+border-radius: 30px; /* Bordes redondeados */
+transition: .4s; /* Transición suave de .4s */
+}
+
+/* Estilizar botones */
+.btn{
+background-color:#e8741c; /* Fondo naranja */
+color: white; /* Color de texto blanco */
+text-decoration: none; /* Eliminar subrayado */
+border: 2px solid transparent; /* Agregar borde transparente */
+font-weight: bold; /* Fuente en negrita */
+padding: 10px 25px; /* Espacio interior */
+border-radius: 30px; /* Bordes redondeados */
+transition: transform .4s; /* Transición suave de transformación .4s */
+}
+
+/* Estilizar botones al pasar el cursor */
+.btn:hover{
+transform: scale(1.2); /* Aumentar el tamaño del botón al pasar el cursor */
+}
+
+/* Estilos para hacer la barra de navegación responsive */
+@media screen and (max-width: 768px) {
+nav {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+nav ul li {
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+.btn {
+    margin-top: 20px;
+}
+}
+
+@media screen and (max-width: 576px) {
+  nav ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 10px;
+  }
+  .btn {
+  margin-top: 20px;
+  }
+  }
+
+.content {
+  position: relative;
+  margin-top: calc(25vh + 80px);
+  margin-bottom: calc(10vh + 50px);
+  padding: 0 20px;
+  text-align: center;
+}
+
+.frase {
+  font-size: 70px;
+  text-align: center;
+  color: white;
+}
+
+.palabra1 {
+  display: inline-block;
+  background-color: #e8741c;
+  color: white;
+  padding: 10px 19px;
+  margin-right: 10px;
+}
+
+.palabra2 {
+  display: inline-block;
+  background-color: #0aae82;
+  color: white;
+  padding: 4px 11px;
+}
+
+@media screen and (max-width: 768px) {
+  .frase {
+    font-size: 50px;
+  }
+  
+  .palabra1 {
+    padding: 5px 10px;
+  }
+  
+  .palabra2 {
+    padding: 2px 5px;
+  }
+
+  .content {
+    margin-top: calc(10vh + 60px); /* Reducir espacio superior */
+    margin-bottom: calc(5vh + 30px); /* Reducir espacio inferior */
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  .frase {
+    font-size: 30px;
+  }
+  
+  .palabra1 {
+    padding: 3px 6px;
+  }
+  
+  .palabra2 {
+    padding: 2px 4px;
+  }
+
+  .content {
+    margin-top: calc(5vh + 40px); /* Reducir espacio superior aún más */
+    margin-bottom: calc(5vh + 30px); /* Reducir espacio inferior aún más */
+  }
+
+}
+
+.titulo{
+  background-color:#c51d4a;
+  color: white;
+  padding:4px 11px;
+}
+
+.tituloT{
+  background-color:#e8741c;
+  color: white;
+  padding:4px 11px;
+}
+
+/*.tarjeta {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.687);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 900px;  
+  margin-left: auto; 
+  margin-right: auto; 
+  max-width: 900px;
+  position: relative;
+  text-align: center;
+}*/
+
+.about {
+  position: relative;
+}
+
+.about::before {
+  content: "";
+  background-size: cover;
+  position: absolute;
+  background-position: center center;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  filter: brightness(35%);
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 30px;
+  filter: brightness(85%);
+  margin-right: 20px;
+  max-height: 350px;
+}
+
+.about-text {
+  overflow: hidden;
+  flex: 1;
+  max-width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.about-text h2 {
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+  font-weight: 350;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+}
+
+.palabra3 {
+  background-color: #c51d4a;
+  color: white;
+  padding: 2px 18px;
+  font-weight: 600;
+}
+
+.about-text h5 {
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+.about-text p {
+  color: rgb(0, 0, 0);
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-size: 1rem;
+  margin-bottom: 45px;
+  text-align: justify;
+}
+
+.about img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 30px;
+  margin-left: 15px;
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Estilos para pantallas con ancho máximo de 768px */
+  /*.tarjeta {
+    width: 90%;  Ancho ajustado 
+    margin: 40px auto;
+  }*/
+
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    max-height: none;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+}
+
+.menu_fondo2{
+  height: auto;
+  width: 100%;
+  padding: 30px;
+  position: relative;
+}
+
+.menu_fondo2::before{
+  content: "";
+  background-image: url(../assets/images/nombre_cei.webp);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom:0px;
+  left:0px;
+  filter: brightness(35%);
+}
+
+.tarjeta2{
+  max-width: 900px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.687);
+  border-radius: 20px;
+  margin-top: 40px;
+  margin-left: auto; /* Centrado */
+  margin-right: auto; /* Centrado */
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.contact {
+  width: 100%;
+  min-height: 370px;
+  background: #8d8989;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.contact h2 {
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact h3 {
+  color: white;
+  font-weight: 300;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contacto {
+  border-bottom: 2px solid #87ea29;
+}
+
+.contact h5 {
+  color: white;
+  margin: 15px 0px;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+}
+
+footer {
+position: relative;
+width: 100%;
+min-height: 300px;
+background: #0aae82;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 20px;
+}
+
+footer p:nth-child(1) {
+font-size: 30px;
+color: white;
+margin-bottom: 20px;
+font-weight: 600;
+text-align: center;
+}
+
+footer p:nth-child(2) {
+color: white;
+font-size: 17px;
+max-width: 500px;
+text-align: center;
+line-height: 26px;
+margin-bottom: 30px;
+}
+
+.social {
+display: flex;
+justify-content: center;
+margin-bottom: 30px;
+}
+
+.social a {
+width: 45px;
+height: 45px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #353535;
+border-radius: 50%;
+margin: 22px 10px;
+color: white;
+text-decoration: none;
+font-size: 20px;
+}
+
+.social a:hover {
+transform: scale(1.2);
+transition: .3s;
+}
+
+.end {
+position: absolute;
+color: #353535;
+bottom: 10px;
+font-size: 14px;
+text-align: center;
+width: 100%;
+}
